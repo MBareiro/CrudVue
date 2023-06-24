@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Producto Nuevo</title>
@@ -14,6 +14,31 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <style>
+      body {
+        background-color: #111;
+        color: #fff;
+      }
+
+      .container {
+        background-color: #222;
+        color: #fff;
+      }
+
+      input[type="text"],
+      input[type="number"] {
+        background-color: #333;
+        color: #fff;
+      }
+
+      .btn-success {
+        background-color: #28a745;
+      }
+
+      .btn-success:hover {
+        background-color: #1f8432;
+      }
+    </style>
   </head>
   <body>
     <header id="header">
@@ -23,33 +48,34 @@
       <div class="container" id="app">
         <form
           style="
-            background-color: aliceblue;
+            background-color: #222;
+            color: #fff;
             margin: 10px auto;
             width: 400px;
             padding: 20px;
           "
         >
-          <h2>Editar Producto</h2>
-          <p>Precio:{{precio}}</p>
+          <h2 style="color: #fff;">Editar Producto</h2>
+          <p style="color: #fff;">Precio: {{precio}}</p>
           <div class="mb-3">
-            <label for="id">Id</label>
-            <input type="number" name="id" id="id" disabled v-model="id" />
+            <label for="id" style="color: #fff;">Id</label>
+            <input type="number" name="id" id="id" disabled v-model="id" style="background-color: #333; color: #fff;" />
           </div>
           <div class="mb-3">
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre" v-model="nombre" />
+            <label for="nombre" style="color: #fff;">Nombre</label>
+            <input type="text" name="nombre" id="nombre" v-model="nombre" style="background-color: #333; color: #fff;" />
           </div>
           <div class="mb-3">
-            <label for="precio">Precio</label>
-            <input type="number" name="precio" id="precio" v-model="precio" />
+            <label for="precio" style="color: #fff;">Precio</label>
+            <input type="number" name="precio" id="precio" v-model="precio" style="background-color: #333; color: #fff;" />
           </div>
           <div class="mb-3">
-            <label for="stock">Stock</label>
-            <input type="number" name="stock" id="stock" v-model="stock" />
+            <label for="stock" style="color: #fff;">Stock</label>
+            <input type="number" name="stock" id="stock" v-model="stock" style="background-color: #333; color: #fff;" />
           </div>
           <div class="mb-3">
-            <label for="imagen">Imagen</label>
-            <input type="text" name="imagen" id="imagen" v-model="imagen" />
+            <label for="imagen" style="color: #fff;">Imagen</label>
+            <input type="text" name="imagen" id="imagen" v-model="imagen" style="background-color: #333; color: #fff;" />
             <img width="100" :src="imagen" alt="" />
           </div>
           <button
@@ -76,7 +102,7 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/main.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/producto_editar.js"></script>
   </body>
