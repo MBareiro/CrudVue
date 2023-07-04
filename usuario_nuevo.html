@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Producto Nuevo</title>
+    <title>Usuario Nuevo</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -15,66 +15,33 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-    <style>
-      body {
-        background-color: #111;
-        color: #fff;
-      }
-
-      .container {
-        background-color: #222;
-        color: #fff;
-      }
-
-      input[type="text"],
-      input[type="number"] {
-        background-color: #333;
-        color: #fff;
-      }
-
-      .btn-success {
-        background-color: #28a745;
-      }
-
-      .btn-success:hover {
-        background-color: #1f8432;
-      }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-    <header id="header">
-      <!-- place navbar here -->
-    </header>
+ 
     <main>
       <div class="container" id="app">
         <form>
-          <h1>Alta de Producto</h1>
+          <h1>Alta de Usuario</h1>
           <div class="mb-3">
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" id="nombre" v-model="nombre" />
           </div>
           <div class="mb-3">
-            <label for="precio">Precio</label>
-            <input type="number" name="precio" id="precio" v-model="precio" />
+            <label for="apellido">Apellido</label>
+            <input type="number" name="apellido" id="apellido" v-model="apellido" />
           </div>
           <div class="mb-3">
-            <label for="stock">Stock</label>
-            <input type="number" name="stock" id="stock" v-model="stock" />
-          </div>
-          <div class="mb-3">
-            <label for="imagen">Imagen</label>
-            <input type="text" name="imagen" id="imagen" v-model="imagen" />
-            <img width="100" :src="imagen" alt="" />
+            <label for="direccion">Direccion</label>
+            <input type="number" name="direccion" id="direccion" v-model="direccion" />
           </div>
           <button type="button" class="btn btn-success" v-on:click="grabar()">
-            Grabar
+            Guardar
           </button>
         </form>
       </div>
     </main>
-    <footer>
-      <!-- place footer here -->
-    </footer>
+  
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -88,6 +55,6 @@
     ></script>
    <!-- <script src="./js/main.js"></script> -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="./js/productos.js"></script>
+    <script src="./js/usuarios.js"></script>
   </body>
 </html>

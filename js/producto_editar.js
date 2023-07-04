@@ -7,9 +7,8 @@ const { createApp } = Vue
       return {
         id:0,
         nombre:"",
-        imagen:"",
-        stock:0,
-        precio:0,
+        apellido:"",
+        direccion:0,
         url:'https://mbdev.pythonanywhere.com/productos/'+id,
        }  
     },
@@ -21,9 +20,8 @@ const { createApp } = Vue
                     console.log(data)
                     this.id=data.id
                     this.nombre = data.nombre;
-                    this.imagen=data.imagen
-                    this.stock=data.stock
-                    this.precio=data.precio                    
+                    this.direccion=data.direccion
+                    this.apellido=data.apellido                    
                 })
                 .catch(err => {
                     console.error(err);
@@ -33,9 +31,8 @@ const { createApp } = Vue
         modificar() {
             let producto = {
                 nombre:this.nombre,
-                precio: this.precio,
-                stock: this.stock,
-                imagen:this.imagen
+                apellido: this.apellido,
+                direccion: this.direccion
             }
             var options = {
                 body: JSON.stringify(producto),
