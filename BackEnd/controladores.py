@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from app import app, ma
+from app import ma
 from modelos import *
 
 class UsuarioSchema(ma.Schema):
