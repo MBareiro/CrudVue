@@ -1,93 +1,96 @@
-
 .container {
-    background-color: #222;
-    color: #fff;
+  background-color: #222;
+  color: #fff;
 }
 
 th,
 td {
-    color: #fff;
+  color: #fff;
 }
 
 .btn-primary {
-    background-color: #007bff;
+  background-color: #007bff;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .btn-danger {
-    background-color: #dc3545;
+  background-color: #dc3545;
 }
 
 .btn-danger:hover {
-    background-color: #a71d2a;
+  background-color: #a71d2a;
 }
 
 .table {
-    background-color: #333;
+  background-color: #333;
 }
 
 footer {
-    background-color: #111;
-    color: #fff;
+  background-color: #111;
+  color: #fff;
 }
 
 .card {
-    margin-bottom: 20px;
-    background-color: rgba(221, 221, 221, 0.342);
-    color: #fff;
+  margin-bottom: 20px;
+  background-color: rgba(221, 221, 221, 0.342);
+  color: #fff;
 }
 
 .card-title,
 .card-text {
-    color: #fff;
+  color: #fff;
 }
 
 body {
-    background-color: #111;
-    color: #fff;
+  background-color: #111;
+  color: #fff;
 }
 
 form {
-    background-color: #222;
-    padding: 20px;
-    max-width: 400px;
-    margin: 0 auto;
+  background-color: #222;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 h2 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 label {
-    display: block;
-    margin-bottom: 10px;
+  display: block;
+  margin-bottom: 10px;
 }
 
 input[type="text"],
 input[type="number"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff;
-    color: #000;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #000;
 }
 
 img {
-    display: block;
-    margin-top: 10px;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
 }
 
 button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#cargando{
+  margin-bottom: 10px;
 }
