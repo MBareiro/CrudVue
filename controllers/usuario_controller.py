@@ -1,6 +1,8 @@
 from app import app, db
 from models.usuario_model import Usuario, UsuarioSchema
 from flask import jsonify, request
+import os
+app.config['UPLOAD_FOLDER'] = '/img'
 
 usuario_schema = UsuarioSchema()
 usuarios_schema = UsuarioSchema(many=True)
@@ -28,7 +30,14 @@ def create_usuario():
     nombre = request.json['nombre']
     apellido = request.json['apellido']
     direccion = request.json['direccion']
-    new_usuario = Usuario(nombre=nombre, apellido=apellido, direccion=direccion)
+
+    foto = request.files['foto']
+    # Aquí puedes guardar el archivo en la ubicación deseada
+    # y retornar una respuesta adecuada
+    foto.save('img/' + foto.filename)
+
+    foto = os.path.join('img' + foto.filename)
+    new_usuario = Usuario(nombre=nombre, apellido=apellido, direccion=direccion, foto=foto)
     db.session.add(new_usuario)
     db.session.commit()
     return usuario_schema.jsonify(new_usuario)
