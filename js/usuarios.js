@@ -63,6 +63,7 @@ createApp({
         nombre: this.nombre,
         apellido: this.apellido,
         direccion: this.direccion,
+        foto: this.foto
       };
       var options = {
         body: JSON.stringify(usuario),
