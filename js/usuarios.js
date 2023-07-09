@@ -1,6 +1,5 @@
 const { createApp } = Vue;
 createApp({
-  
   data() {
     return {
       usuarios: [],
@@ -33,15 +32,31 @@ createApp({
         });
     },
     eliminar(usuario) {
-      const url = this.url + "/" + usuario;
-      var options = {
-        method: "DELETE",
-      };
-      fetch(url, options)
-        .then((res) => res.text()) // or res.json()
-        .then((res) => {
-          location.reload();
-        });
+      Swal.fire({
+        title: "¿Estás seguro?",
+        text: "Esta acción no se puede deshacer",
+        icon: "warning",
+        background: "#6D6D6D",
+        color: "white",
+        showCancelButton: true,
+        confirmButtonText: "Borrar",
+        cancelButtonText: "Cancelar",
+        reverseButtons: true,
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Realizar la acción de eliminar o realizar otras operaciones
+
+          const url = this.url + "/" + usuario;
+          var options = {
+            method: "DELETE",
+          };
+          fetch(url, options)
+            .then((res) => res.text()) // or res.json()
+            .then((res) => {
+              location.reload();
+            });
+        }
+      });
     },
     grabar() {
       let usuario = {
@@ -57,8 +72,15 @@ createApp({
       };
       fetch(this.url, options)
         .then(function () {
-          alert("Registro grabado");
-          window.location.href = "./index.html";
+          Swal.fire({
+            title: "Exito!",
+            text: "Registro grabado",
+            icon: "success",
+            background: "#6D6D6D",
+            color: "white",
+          }).then(function () {
+            window.location.href = "./index.html";
+          });
         })
         .catch((err) => {
           console.error(err);

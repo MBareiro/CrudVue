@@ -42,8 +42,15 @@ createApp({
       };
       fetch(this.url, options)
         .then(function () {
-          alert("Registro modificado");
-          window.location.href = "./index.html";
+          Swal.fire({
+            title: "Exito!",
+            text: "Registro modificado",
+            icon: "success",
+            background: "#6D6D6D",
+            color: "white",
+          }).then(function () {
+            window.location.href = "./index.html";
+          });
         })
         .catch((err) => {
           console.error(err);
