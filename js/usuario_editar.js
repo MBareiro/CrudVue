@@ -9,7 +9,8 @@ createApp({
       nombre: "",
       apellido: "",
       direccion: "",
-      url: "https://mbdev.pythonanywhere.com/usuarios/" + id,
+      //url: "https://mbdev.pythonanywhere.com/usuarios/" + id, http://localhost:5000/disponibilidades
+      url: "http://localhost:5000/usuarios/" + id,
     };
   },
   methods: {
