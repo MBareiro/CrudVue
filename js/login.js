@@ -53,8 +53,8 @@ createApp({
     this.fetchData(this.url);
   },
 }).mount("#app");
-
+/* 
 if(sessionStorage.getItem("login") != "true") {
-//  /*  console.log("Login") */
+//    console.log("Login") 
   window.location.href = 'login.html';
-}
+} */

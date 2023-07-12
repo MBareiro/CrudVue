@@ -4,7 +4,7 @@ createApp({
     return {
       usuarios: [],
       //  si el backend esta corriendo local  usar localhost 5000(si no lo subieron a pythonanywhere)
-      //url:'http://localhost:5000/usuarios',
+       //url:'http://localhost:5000/usuarios',
       url: "https://mbdev.pythonanywhere.com/usuarios", // si ya lo subieron a pythonanywhere
 
       error: false,
@@ -15,6 +15,8 @@ createApp({
       nombre: "",
       apellido: "",
       direccion: "",
+      password: "",
+      email: "",
     };
   },
 
@@ -62,7 +64,8 @@ createApp({
         nombre: this.nombre,
         apellido: this.apellido,
         direccion: this.direccion,
-        
+        password: this.password,
+        email: this.email
       };
       var options = {
         body: JSON.stringify(usuario),
