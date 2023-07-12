@@ -15,8 +15,6 @@ createApp({
       nombre: "",
       apellido: "",
       direccion: "",
-      password: "",
-      email: "",
     };
   },
 
@@ -64,8 +62,7 @@ createApp({
         nombre: this.nombre,
         apellido: this.apellido,
         direccion: this.direccion,
-        password: this.password,
-        email: this.email
+        
       };
       var options = {
         body: JSON.stringify(usuario),
