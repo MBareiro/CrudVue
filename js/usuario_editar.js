@@ -9,8 +9,8 @@ createApp({
       nombre: "",
       apellido: "",
       direccion: "",
-      //url: "https://mbdev.pythonanywhere.com/usuarios/" + id, http://localhost:5000/disponibilidades
-      url: "http://localhost:5000/usuarios/" + id,
+      url: "https://mbdev.pythonanywhere.com/usuarios/" + id, 
+      //url: "http://localhost:5000/usuarios/" + id,
     };
   },
   methods: {
@@ -23,8 +23,6 @@ createApp({
           this.nombre = data.nombre;
           this.direccion = data.direccion;
           this.apellido = data.apellido;
-          this.email = data.email;
-          this.password = data.password;
 
         })
         .catch((err) => {
@@ -36,9 +34,7 @@ createApp({
       let producto = {
         nombre: this.nombre,
         apellido: this.apellido,
-        direccion: this.direccion,
-        password: this.password,
-        email: this.email
+        direccion: this.direccion
       };
       var options = {
         body: JSON.stringify(producto),
