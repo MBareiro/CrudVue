@@ -4,8 +4,8 @@ createApp({
     return {
       usuarios: [],
       //  si el backend esta corriendo local  usar localhost 5000(si no lo subieron a pythonanywhere)
-        //url:'http://localhost:5000/usuarios',
-      url: "https://mbdev.pythonanywhere.com/usuarios", // si ya lo subieron a pythonanywhere
+        url:'http://localhost:5000/usuarios',
+      //url: "https://mbdev.pythonanywhere.com/usuarios", // si ya lo subieron a pythonanywhere
 
       error: false,
       cargando: true,
@@ -15,6 +15,8 @@ createApp({
       nombre: "",
       apellido: "",
       direccion: "",
+      password: "",
+      email: "",
     };
   },
 
@@ -45,7 +47,6 @@ createApp({
       }).then((result) => {
         if (result.isConfirmed) {
           // Realizar la acción de eliminar o realizar otras operaciones
-
           const url = this.url + "/" + usuario;
           var options = {
             method: "DELETE",
@@ -62,7 +63,9 @@ createApp({
       let usuario = {
         nombre: this.nombre,
         apellido: this.apellido,
-        direccion: this.direccion
+        direccion: this.direccion,
+        password: this.password,
+        email: this.email
       };
       var options = {
         body: JSON.stringify(usuario),

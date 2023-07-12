@@ -23,6 +23,9 @@ createApp({
           this.nombre = data.nombre;
           this.direccion = data.direccion;
           this.apellido = data.apellido;
+          this.email = data.email;
+          this.password = data.password;
+
         })
         .catch((err) => {
           console.error(err);
@@ -34,6 +37,8 @@ createApp({
         nombre: this.nombre,
         apellido: this.apellido,
         direccion: this.direccion,
+        password: this.password,
+        email: this.email
       };
       var options = {
         body: JSON.stringify(producto),
