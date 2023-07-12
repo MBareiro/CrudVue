@@ -8,7 +8,7 @@ createApp({
       data: [],
       email: "",
       password: "",
-      url: "https://mbdev.pythonanywhere.com/usuarios/"
+      url: "https://mbdev.pythonanywhere.com/usuarios"
       // url: "http://localhost:5000/usuarios"
     };
   },
