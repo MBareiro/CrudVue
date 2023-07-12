@@ -33,7 +33,9 @@ createApp({
           color: "white",
         })
       } else {
+        
         arreglo  = this.datos.filter(element => element.email= this.email);
+        console.log(arreglo)
         if (arreglo[0].password == this.password) {
             sessionStorage.setItem('login', 'true');
             window.location.href = 'index.html';
