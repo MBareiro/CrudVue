@@ -11,10 +11,10 @@
         <h1>Iniciar sesión</h1>
        
             <label for="email">Email:</label>
-            <input v-model="email" type="text" id="email" name="email" required>
+            <input v-model="email" type="text" id="email" name="email" placeholder="Username: usuario " required>
 
             <label for="password">Contraseña:</label>
-            <input v-model="password" type="password" id="password" name="password" required>
+            <input v-model="password" type="password" id="password" name="password" placeholder="Password: 123 " required>
 
             <input type="submit" value="Iniciar sesión" v-on:click="validar()">
         
