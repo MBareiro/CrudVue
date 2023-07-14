@@ -1,6 +1,5 @@
 .container {
   background-color: #222;
-  background-color: black;
   color: #fff;
 }
 
@@ -47,6 +46,8 @@ footer {
 
 body {
   color: #fff;
+  background-color: black;
+
 }
 
 form {
